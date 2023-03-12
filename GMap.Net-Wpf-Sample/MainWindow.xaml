@@ -1,0 +1,31 @@
+﻿<Window x:Class="GMap.Net_Wpf_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:map="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GMap.Net_Wpf_Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Rectangle Width="20"/>
+            <Button Content="拖动地图" Height="32" x:Name="btnDragMap" Click="btnDragMap_Click"/>
+            <Rectangle Width="20"/>
+            <Button Content="选择元素" Height="25" x:Name="btnSelectMap" Click="btnSelectMap_Click"/>
+            <Rectangle Width="20"/>
+            <Button Content="添加直线" Height="25" x:Name="btnDrawLine" Click="btnDrawLine_Click"/>
+            <Rectangle Width="20"/>
+            <Button Content="添加多边形" Height="25" x:Name="btnDrawPolygon" Click="btnDrawPolygon_Click"/>
+            <Rectangle Width="20"/>
+            <Button Content="移除选中元素" Height="25" x:Name="btnRemoveSelected" Click="btnRemoveSelected_Click"/>
+            <Rectangle Width="20"/>
+            <TextBox x:Name="txtPos" Height="25" VerticalContentAlignment="Center" Width="250"/>
+        </StackPanel>
+        <map:GMapControl x:Name="myMap" Grid.Row="1"/>
+    </Grid>
+</Window>
